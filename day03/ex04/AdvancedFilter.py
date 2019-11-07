@@ -1,22 +1,4 @@
 import numpy as np
-import os
-import matplotlib.pyplot as plt
-
-
-class ImageProcessor:
-    def load(self, path):
-        if os.path.exists(path) and os.path.isfile(path):
-            img_array = plt.imread(path)
-            print(f'Loading image of dimensions {img_array.shape[0]} x {img_array.shape[1]}')
-            return img_array
-        else:
-            return None
-
-    def display(self, array: np.array):
-        if array is not None:
-            plt.axis('off')
-            plt.imshow(array)
-            plt.show()
 
 
 class AdvancedFilter:
